@@ -1,0 +1,136 @@
+Q.NO:1
+package com.example.hr;
+
+public class Employee {
+    private String name;
+    private int id;
+    private double salary;
+
+    // Constructor
+    public Employee(String name, int id, double salary) {
+        this.name = name;
+        this.id = id;
+        this.salary = salary;
+    }
+
+    // Method to print the employee's name
+    public void printName() {
+        System.out.println("Employee Name: " + name);
+    }
+
+    // Method to print the employee's salary
+    public void printSalary() {
+        System.out.println("Employee Salary: $" + salary);
+    }
+
+    // Getters and Setters for name, id, and salary
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+package com.example.hrtest;
+
+import com.example.hr.Employee;
+
+public class EmployeeTest {
+    public static void main(String[] args) {
+        // Create an instance of the Employee class
+        Employee employee = new Employee("John Doe", 12345, 75000);
+
+        // Call methods to print the employee's name and salary
+        employee.printName();
+        employee.printSalary();
+    }
+}
+
+Q.NO:2
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an ArrayList of strings
+        ArrayList<String> stringList = new ArrayList<>();
+
+        // Add some elements to the ArrayList
+        stringList.add("Hello");
+        stringList.add("World");
+        stringList.add("This");
+        stringList.add("Is");
+        stringList.add("Java");
+
+        // Print the ArrayList before removing elements
+        System.out.println("ArrayList before removing elements: " + stringList);
+
+        // Remove all elements from the ArrayList
+        stringList.clear();
+
+        // Print the ArrayList after removing elements
+        System.out.println("ArrayList after removing elements: " + stringList);
+    }
+}
+Q.NO:3
+import java.util.Map;
+import java.util.TreeMap;
+
+public class EmployeeDirectory {
+    public static void main(String[] args) {
+        // Step 2: Create a TreeMap to store employee ID and names
+        TreeMap<Integer, String> employees = new TreeMap<>();
+
+        // Step 3: Add some employee entries to the TreeMap
+        employees.put(102, "Alice");
+        employees.put(105, "David");
+        employees.put(101, "Bob");
+        employees.put(104, "Charlie");
+        employees.put(103, "Eve");
+
+        // Step 4: Retrieve and print the names of the employees in alphabetical order
+        System.out.println("Employees in alphabetical order:");
+
+        // Since TreeMap sorts the keys, we need to sort the values (names) in alphabetical order
+        employees.values().stream()
+                .sorted()
+                .forEach(System.out::println);
+    }
+}
+Q.NO:4
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListToArray {
+    public static void main(String[] args) {
+        // Create a List and add some elements
+        List<String> list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Cherry");
+
+        // Convert the List to an Array
+        String[] array = list.toArray(new String[0]);
+
+        // Print the array to verify the conversion
+        for (String element : array) {
+            System.out.println(element);
+        }
+    }
+}
+
